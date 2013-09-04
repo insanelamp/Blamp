@@ -11,15 +11,8 @@ from werkzeug.routing import Rule
 from werkzeug.wrappers import Response
 from .resourcebase import ResourceBase
 from .request import Request
+from .mimetypehandlers import MimetypeHandlerBase
 import os
-
-class MimetypeHandlerBase(object):
-
-    def __init__(self, app):
-        pass
-
-    def __call__(self, request, view, resource):
-        return str(resource)
 
 class Application(object):
 
